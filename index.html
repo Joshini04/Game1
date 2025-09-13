@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Guess The Number 🎲</title>
+    <link rel="stylesheet" href="style.css"> <!-- External CSS file -->
+</head>
+<body>
+
+    <!-- Welcome Screen 🎉 -->
+    <div id="welcomeScreen" class="screen">
+        <h1 class="welcome-text">Welcome to the Guess the Number Game! 🤩</h1>
+        <button id="playBtn">Play!! ▶️</button>
+    </div>
+
+    <!-- Difficulty Selection Screen 🔢 -->
+    <div id="difficultyScreen" class="screen" style="display: none;">
+        <h2>Select Difficulty</h2>
+        <div class="card-container">
+            <div class="card" onclick="startGame('easy')">Easy 😊</div>
+            <div class="card" onclick="startGame('hard')">Hard 💪</div>
+        </div>
+        <button class="backBtn" onclick="goBack('welcome')">⬅ Back</button>
+    </div>
+
+    <!-- Game Screen 📊 -->
+    <div id="gameScreen" class="screen" style="display: none;">
+        <h1>Guess The Name 🎲</h1>
+        <input id="gno" type="number" placeholder="Enter number">
+        <button onclick="Gus()">Check!! ✅</button>
+        <p id="result">You're right/wrong</p>
+        <p id="score">Score:10</p>
+        <button class="backBtn" onclick="goBack('difficulty')">⬅ Back</button>
+    </div>
+
+    <script src="script.js"></script> <!-- External JavaScript file -->
+</body>
+</html>
